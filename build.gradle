@@ -24,6 +24,8 @@ dependencies {
     testCompile 'org.testng:testng:6.8.5'
 }
 
+sourceCompatibility = '1.7'
+
 test {
     useTestNG()
 }
