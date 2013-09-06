@@ -10,10 +10,15 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    compile.exclude group: 'commons-logging', module: 'commons-logging'
+}
+
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // The production code uses the SLF4J logging API at compile time
     compile 'org.slf4j:slf4j-api:1.7.5'
+    runtime 'org.slf4j:jcl-over-slf4j:1.7.5'
     // Logback is runtime implementation of SLF4J
     runtime 'ch.qos.logback:logback-classic:1.0.13'
 
