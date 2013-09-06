@@ -1,6 +1,7 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'war'
+apply plugin: 'jetty'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -26,3 +27,8 @@ dependencies {
 test {
     useTestNG()
 }
+
+// Jetty configuration
+httpPort = 80
+stopPort = 8999
+stopKey = 'STOP'
