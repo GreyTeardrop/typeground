@@ -1,7 +1,7 @@
 package domain.type;
 
 public enum MarkMode {
-    ASPECT,
-    REDIRECT,
-    BLOCK
+    ASPECT, // аспект
+    REDIRECT, // перевод
+    BLOCK // блок
 }

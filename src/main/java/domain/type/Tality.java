@@ -1,8 +1,8 @@
 package domain.type;
 
 public enum Tality {
-    VITAL,
-    MENTAL,
-    SUPER_EGO,
-    SUPER_ID
+    VITAL, // витал
+    MENTAL, // ментал
+    SUPER_EGO, // суперэго
+    SUPER_ID // суперид
 }
