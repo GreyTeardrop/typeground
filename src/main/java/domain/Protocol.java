@@ -4,9 +4,24 @@ import java.util.Set;
 
 public class Protocol {
 
+    ////////////////////////////////////////////////
+    // ATTRIBUTES
+
+    private String id;
     private String text;
     private Set<Selection> selections;
     private MetaProtocolInfo metaProtocolInfo;
+
+    ////////////////////////////////////////////////
+    // GETTERS AND SETTERS
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getText() {
         return text;

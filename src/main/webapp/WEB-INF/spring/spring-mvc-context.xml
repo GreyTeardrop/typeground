@@ -9,5 +9,6 @@
     <mvc:annotation-driven/>
 
     <import resource="mongodb.xml"/>
+    <import resource="webapp-context.xml"/>
 
 </beans>
