@@ -23,7 +23,7 @@ dependencies {
     runtime 'ch.qos.logback:logback-classic:1.0.13'
 
     compile 'org.springframework:spring-webmvc:3.2.4.RELEASE'
-    compile group: 'org.springframework.data', name: 'spring-data-mongodb', version: '1.2.0.RELEASE'
+    compile 'org.springframework.data:spring-data-mongodb:1.2.3.RELEASE'
 
     // Servlet 3.0 and JSP 2.2 are available for code to be used, they will be provided by web container
     providedCompile 'org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016'
