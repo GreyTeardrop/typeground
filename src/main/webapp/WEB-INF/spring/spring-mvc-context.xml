@@ -8,4 +8,6 @@
 
     <mvc:annotation-driven/>
 
+    <import resource="mongodb.xml"/>
+
 </beans>
