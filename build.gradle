@@ -39,11 +39,12 @@ test {
 }
 
 // Jetty configuration
-jettyRun {
+httpPort = 80
+stopPort = 8999
+stopKey = 'STOP'
+
+[jettyRun,jettyRunWar]*.configure {
     contextPath = ''
-    httpPort = 80
-    stopPort = 8999
-    stopKey = 'STOP'
     reload = 'automatic'
     scanIntervalSeconds = 1
 }
