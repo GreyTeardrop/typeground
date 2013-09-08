@@ -39,6 +39,9 @@ test {
 }
 
 // Jetty configuration
-httpPort = 80
-stopPort = 8999
-stopKey = 'STOP'
+jettyRun {
+    contextPath = ''
+    httpPort = 80
+    stopPort = 8999
+    stopKey = 'STOP'
+}
