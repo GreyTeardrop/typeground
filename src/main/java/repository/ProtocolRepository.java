@@ -9,11 +9,6 @@ import java.util.UUID;
 public class ProtocolRepository {
 
     ////////////////////////////////////////////////
-    // CONSTANTS
-
-    public static final String COLLECTION_NAME = "protocol";
-
-    ////////////////////////////////////////////////
     // ATTRIBUTES
 
     private MongoTemplate mongoTemplate;
@@ -21,24 +16,30 @@ public class ProtocolRepository {
     ////////////////////////////////////////////////
     // METHODS
 
-    public void addProtocol(Protocol protocol) {
+    public String addProtocol(Protocol protocol) {
         if (!mongoTemplate.collectionExists(Protocol.class)) {
             mongoTemplate.createCollection(Protocol.class);
         }
-        protocol.setId(UUID.randomUUID().toString());
-        mongoTemplate.insert(protocol, COLLECTION_NAME);
+        String id = UUID.randomUUID().toString();
+        protocol.setId(id);
+        mongoTemplate.insert(protocol);
+        return id;
     }
 
-    public List<Protocol> listProtocol() {
-        return mongoTemplate.findAll(Protocol.class, COLLECTION_NAME);
+    public List<Protocol> getAll() {
+        return mongoTemplate.findAll(Protocol.class);
+    }
+
+    public Protocol getById(String id) {
+        return mongoTemplate.findById(id, Protocol.class);
     }
 
     public void deleteProtocol(Protocol protocol) {
         mongoTemplate.remove(protocol);
     }
 
-    public void upateProtocol(Protocol protocol) {
-        mongoTemplate.insert(protocol, COLLECTION_NAME);
+    public void updateProtocol(Protocol protocol) {
+        mongoTemplate.insert(protocol);
     }
 
     ////////////////////////////////////////////////
