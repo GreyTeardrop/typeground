@@ -25,6 +25,7 @@ dependencies {
     compile 'org.springframework:spring-webmvc:3.2.4.RELEASE'
     compile 'org.springframework.data:spring-data-mongodb:1.2.3.RELEASE'
     compile 'joda-time:joda-time:2.3'
+    compile 'org.codehaus.jackson:jackson-jaxrs:1.9.13'
 
     // Servlet 3.0 and JSP 2.2 are available for code to be used, they will be provided by web container
     providedCompile 'org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016'
@@ -40,8 +41,8 @@ test {
 }
 
 // Jetty configuration
-httpPort = 80
-stopPort = 8999
+httpPort = 8001
+stopPort = 8993
 stopKey = 'STOP'
 
 [jettyRun,jettyRunWar]*.configure {
