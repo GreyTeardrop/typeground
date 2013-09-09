@@ -1,5 +1,6 @@
 package domain;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Protocol {
@@ -9,8 +10,8 @@ public class Protocol {
 
     private String id;
     private String text;
-    private Set<Selection> selections;
-    private MetaProtocolInfo metaProtocolInfo;
+    private Set<Selection> selections = new HashSet<Selection>();
+    private MetaProtocolInfo metaProtocolInfo = new MetaProtocolInfo();
 
     ////////////////////////////////////////////////
     // GETTERS AND SETTERS

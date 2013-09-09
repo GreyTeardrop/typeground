@@ -1,6 +1,7 @@
 package repository;
 
 import domain.Protocol;
+import org.joda.time.DateTime;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
 import java.util.List;
@@ -22,6 +23,7 @@ public class ProtocolRepository {
         }
         String id = UUID.randomUUID().toString();
         protocol.setId(id);
+        protocol.getMetaProtocolInfo().setDateCreated(new DateTime());
         mongoTemplate.insert(protocol);
         return id;
     }
@@ -39,6 +41,7 @@ public class ProtocolRepository {
     }
 
     public void updateProtocol(Protocol protocol) {
+        protocol.getMetaProtocolInfo().setDateModified(new DateTime());
         mongoTemplate.insert(protocol);
     }
 

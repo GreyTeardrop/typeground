@@ -1,6 +1,7 @@
 package domain;
 
-import java.util.Date;
+import org.joda.time.DateTime;
+
 import java.util.Set;
 
 public class MetaProtocolInfo {
@@ -8,7 +9,8 @@ public class MetaProtocolInfo {
     private String name;
     private Person person; //типируемый
     private Set<Person> experts;
-    private Date date;
+    private DateTime dateCreated;
+    private DateTime dateModified;
     private String comment;
 
     public String getName() {
@@ -35,12 +37,20 @@ public class MetaProtocolInfo {
         this.experts = experts;
     }
 
-    public Date getDate() {
-        return date;
+    public DateTime getDateCreated() {
+        return dateCreated;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateCreated(DateTime dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public DateTime getDateModified() {
+        return dateModified;
+    }
+
+    public void setDateModified(DateTime dateModified) {
+        this.dateModified = dateModified;
     }
 
     public String getComment() {
