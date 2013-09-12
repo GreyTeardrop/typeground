@@ -4,7 +4,7 @@
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
+<html class="no-js" ng-app="mainApp"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -38,20 +38,9 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
+                <li><a href="#stats">Stats</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </li>
             </ul>
             <form class="navbar-form navbar-right">
                 <div class="form-group">
@@ -67,14 +56,13 @@
     </div>
 </div>
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
-    <div class="container">
+    <div class="container" ng-controller="ProtocolController">
         <form role="form" action="/protocol/save" method="POST">
-            <input type="text" class="form-control" name="metaProtocolInfo.name" value="${protocol.metaProtocolInfo.name}"/>
-            <textarea name="text" class="form-control" rows="10">${protocol.text}</textarea><br>
+            <input type="text" class="form-control" name="metaProtocolInfo.name" ng-model="protocol.name"/>
+            <textarea name="text" class="form-control" rows="10" ng-model="protocol.text"></textarea><br>
 
-           <button type="submit" class="btn btn-default">Save</button>
+           <button type="submit" class="btn btn-default" ng-click="save(protocol)">Save</button>
         </form>
     </div>
 </div>
@@ -83,7 +71,11 @@
 <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
 <script src="/js/vendor/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="/js/vendor/angular-resource.min.js"></script>
 
 <script src="/js/main.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/controller/ProtocolController.js"></script>
 </body>
 </html>
