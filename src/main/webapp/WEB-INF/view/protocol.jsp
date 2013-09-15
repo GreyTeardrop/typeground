@@ -62,7 +62,7 @@
             <input type="text" class="form-control" name="metaProtocolInfo.name" ng-model="protocol.name"/>
             <textarea name="text" class="form-control" rows="10" ng-model="protocol.text"></textarea><br>
 
-           <button type="submit" class="btn btn-default" ng-click="save(protocol)">Save</button>
+            <button type="submit" class="btn btn-default" ng-click="save(protocol)">Save</button>
         </form>
     </div>
 </div>
@@ -71,8 +71,8 @@
 <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
 <script src="/js/vendor/bootstrap.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-<script src="/js/vendor/angular-resource.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-resource.js"></script>
 
 <script src="/js/main.js"></script>
 <script src="/js/app.js"></script>
