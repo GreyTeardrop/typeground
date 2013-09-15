@@ -36,6 +36,10 @@ dependencies {
 
 sourceCompatibility = '1.7'
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 test {
     useTestNG()
 }
