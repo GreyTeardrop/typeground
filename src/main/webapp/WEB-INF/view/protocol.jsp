@@ -74,7 +74,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-resource.js"></script>
 
-<script src="/js/main.js"></script>
 <script src="/js/app.js"></script>
 <script src="/js/controller/ProtocolController.js"></script>
 </body>
