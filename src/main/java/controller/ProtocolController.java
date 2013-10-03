@@ -11,6 +11,7 @@ import repository.ProtocolRepository;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 public class ProtocolController {
@@ -36,6 +37,12 @@ public class ProtocolController {
         response.sendRedirect(protocolUrl);
 
         return protocolUrl;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = Urls.PROTOCOL_API, method = RequestMethod.GET)
+    public List<Protocol> getProtocolList() {
+        return protocolRepository.getAll();
     }
 
     @ResponseBody
