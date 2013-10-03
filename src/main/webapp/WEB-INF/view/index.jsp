@@ -70,6 +70,7 @@
 <script src="/js/app.js"></script>
 <script src="/js/services/IndexData.js"></script>
 <script src="/js/controller/IndexController.js"></script>
+<script src="/js/controller/ProtocolController.js"></script>
 
 </body>
 </html>

@@ -1,10 +1,7 @@
 'use strict';
 
-mainApp.controller('ProtocolController',
-    function ProtocolController($scope) {
-        $scope.protocol = {
-            name: 'My protocol #1',
-            text: 'Some other text'
-        }
+indexApp.controller('ProtocolController',
+    function ProtocolController($scope, indexData, $routeParams) {
+        $scope.protocol = indexData.getProtocol($routeParams.protocolId);
     }
 );
