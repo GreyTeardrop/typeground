@@ -37,9 +37,9 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#stats">Stats</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#/protocols">Protocols</a></li>
+                <%--<li><a href="#about">About</a></li>--%>
+                <%--<li><a href="#contact">Contact</a></li>--%>
             </ul>
             <form class="navbar-form navbar-right">
                 <div class="form-group">
@@ -54,23 +54,18 @@
         <!--/.navbar-collapse -->
     </div>
 </div>
+
+<div class="container">
+    <ng-view></ng-view>
 </div>
 
-<div class="container" ng-controller="IndexController">
-    <ul>
-        <li ng-repeat="protocol in protocolList">
-            <span>{{protocol.metaProtocolInfo.name}}</span>
-        </li>
-    </ul>
-</div>
-
-</div> <!-- /container -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
 <script src="/js/vendor/bootstrap.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-resource.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-route.js"></script>
 
 <script src="/js/app.js"></script>
 <script src="/js/services/IndexData.js"></script>
