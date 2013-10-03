@@ -1,4 +1,14 @@
 'use strict';
 
-var mainApp = angular.module('mainApp', ['ngResource']);
-var indexApp = angular.module('indexApp', ['ngResource']);
+var indexApp = angular.module('indexApp', ['ngResource', 'ngRoute']).
+    config(function ($routeProvider) {
+        $routeProvider.when('/protocol/:protocolId', {
+            templateUrl: '/templates/protocol.jsp',
+            controller: 'ProtocolController'
+        });
+        $routeProvider.when('/protocols', {
+            templateUrl: '/templates/protocolList.jsp',
+            controller: 'IndexController'
+        });
+
+    });
