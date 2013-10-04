@@ -51,9 +51,10 @@ public class ProtocolController {
         return protocolRepository.getById(id);
     }
 
-    @RequestMapping(value = Urls.PROTOCOL_API_TEMPLATE, method = RequestMethod.PUT)
-    public void updateProtocol(@PathVariable String id, @RequestBody Protocol protocol) {
-        protocol.setId(id);
+    @ResponseBody
+    @RequestMapping(value = Urls.PROTOCOL_API_TEMPLATE, method = RequestMethod.POST)
+    public Protocol updateProtocol(@PathVariable String id, @RequestBody Protocol protocol) {
         protocolRepository.updateProtocol(protocol);
+        return  protocolRepository.getById(protocol.getId());
     }
 }

@@ -1,10 +1,14 @@
-indexApp.factory('indexData', function ($resource) {
+indexApp.factory('indexData', function ($resource, $log) {
+    var Protocol = $resource('/api/protocol/:id', {id: '@id'});
     return{
-        getProtocolList: function(){
-            return $resource('/api/protocol').query();
+        getProtocolList: function () {
+            return Protocol.query();
         },
         getProtocol: function (protocolId) {
-            return $resource('/api/protocol/:id', {id: '@id'}).get({id: protocolId});
+            return Protocol.get({id: protocolId});
+        },
+        saveProtocol: function(protocol) {
+            protocol.$save();
         }
-    }
+    };
 });
