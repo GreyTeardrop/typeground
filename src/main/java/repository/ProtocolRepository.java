@@ -42,7 +42,7 @@ public class ProtocolRepository {
 
     public void updateProtocol(Protocol protocol) {
         protocol.getMetaProtocolInfo().setDateModified(new DateTime());
-        mongoTemplate.insert(protocol);
+        mongoTemplate.save(protocol);
     }
 
     ////////////////////////////////////////////////
