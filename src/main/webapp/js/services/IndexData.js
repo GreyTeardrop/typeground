@@ -8,7 +8,7 @@ indexApp.factory('indexData', function ($resource, $q) {
             return Protocol.get({id: protocolId});
         },
         saveProtocol: function (protocol) {
-            protocol.$save();
+            return protocol.$save();
         },
         getNewProtocol: function () {
             var deferred = $q.defer();
