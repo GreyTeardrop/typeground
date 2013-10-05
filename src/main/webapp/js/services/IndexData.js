@@ -1,4 +1,4 @@
-indexApp.factory('indexData', function ($resource, $log) {
+indexApp.factory('indexData', function ($resource, $q) {
     var Protocol = $resource('/api/protocol/:id', {id: '@id'});
     return{
         getProtocolList: function () {
@@ -7,8 +7,19 @@ indexApp.factory('indexData', function ($resource, $log) {
         getProtocol: function (protocolId) {
             return Protocol.get({id: protocolId});
         },
-        saveProtocol: function(protocol) {
+        saveProtocol: function (protocol) {
             protocol.$save();
+        },
+        getNewProtocol: function () {
+            var deferred = $q.defer();
+            Protocol.save(null,
+                function (response) {
+                    deferred.resolve(response);
+                },
+                function (response) {
+                    deferred.reject(response);
+                });
+            return deferred.promise;
         }
     };
 });

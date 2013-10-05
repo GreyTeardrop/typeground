@@ -38,6 +38,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#/protocols">Protocols</a></li>
+                <li><a href="#/new">New</a></li>
                 <%--<li><a href="#about">About</a></li>--%>
                 <%--<li><a href="#contact">Contact</a></li>--%>
             </ul>
@@ -71,6 +72,7 @@
 <script src="/js/services/IndexData.js"></script>
 <script src="/js/controller/IndexController.js"></script>
 <script src="/js/controller/ProtocolController.js"></script>
+<script src="/js/controller/NewProtocolController.js"></script>
 
 </body>
 </html>

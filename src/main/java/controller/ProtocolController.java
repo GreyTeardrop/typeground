@@ -25,35 +25,24 @@ public class ProtocolController {
     ////////////////////////////////////////////////
     // METHODS
 
-    @ResponseBody
     @RequestMapping(value = Urls.PROTOCOL_API, method = RequestMethod.POST)
-    public String createProtocol(@RequestBody Protocol protocol,
-                                 HttpServletRequest request,
-                                 HttpServletResponse response) throws IOException {
-        String newProtocolId = protocolRepository.addProtocol(protocol);
-        String protocolUrl = request.getContextPath() + Urls.PROTOCOL_API + '/' + newProtocolId;
-
-        response.setStatus(HttpStatus.CREATED.value());
-        response.sendRedirect(protocolUrl);
-
-        return protocolUrl;
+    public @ResponseBody Protocol createProtocol() throws IOException {
+        String newProtocolId = protocolRepository.addProtocol(new Protocol());
+        return protocolRepository.getById(newProtocolId);
     }
 
-    @ResponseBody
     @RequestMapping(value = Urls.PROTOCOL_API, method = RequestMethod.GET)
-    public List<Protocol> getProtocolList() {
+    public @ResponseBody List<Protocol> getProtocolList() {
         return protocolRepository.getAll();
     }
 
-    @ResponseBody
     @RequestMapping(value = Urls.PROTOCOL_API_TEMPLATE, method = RequestMethod.GET)
-    public Protocol getProtocol(@PathVariable String id) {
+    public @ResponseBody Protocol getProtocol(@PathVariable String id) {
         return protocolRepository.getById(id);
     }
 
-    @ResponseBody
     @RequestMapping(value = Urls.PROTOCOL_API_TEMPLATE, method = RequestMethod.POST)
-    public Protocol updateProtocol(@PathVariable String id, @RequestBody Protocol protocol) {
+    public @ResponseBody Protocol updateProtocol(@PathVariable String id, @RequestBody Protocol protocol) {
         protocolRepository.updateProtocol(protocol);
         return  protocolRepository.getById(protocol.getId());
     }
