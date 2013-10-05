@@ -3,6 +3,8 @@ package repository;
 import domain.Protocol;
 import org.joda.time.DateTime;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 
 import java.util.List;
 import java.util.UUID;
@@ -36,8 +38,10 @@ public class ProtocolRepository {
         return mongoTemplate.findById(id, Protocol.class);
     }
 
-    public void deleteProtocol(Protocol protocol) {
-        mongoTemplate.remove(protocol);
+    public void deleteProtocol(String id) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("id").is(id));
+        mongoTemplate.remove(query, Protocol.class);
     }
 
     public void updateProtocol(Protocol protocol) {

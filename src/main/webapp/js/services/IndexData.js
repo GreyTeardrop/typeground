@@ -20,6 +20,9 @@ indexApp.factory('indexData', function ($resource, $q) {
                     deferred.reject(response);
                 });
             return deferred.promise;
+        },
+        deleteProtocol: function(protocolId){
+            Protocol.delete({id: protocolId});
         }
     };
 });

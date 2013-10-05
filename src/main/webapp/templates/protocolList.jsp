@@ -4,6 +4,7 @@
     <ul>
         <li ng-repeat="protocol in protocolList">
             <a href="/protocol/{{protocol.id}}">{{protocol.metaProtocolInfo.name}}</a>
+            <button type="button" class="btn btn-xs" ng-click="deleteProtocol(protocol.id)">Delete</button>
         </li>
     </ul>
 </div>

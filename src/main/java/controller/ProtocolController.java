@@ -46,4 +46,9 @@ public class ProtocolController {
         protocolRepository.updateProtocol(protocol);
         return  protocolRepository.getById(protocol.getId());
     }
+
+    @RequestMapping(value = Urls.PROTOCOL_API_TEMPLATE, method = RequestMethod.DELETE)
+    public @ResponseBody void deleteProtocol(@PathVariable String id) {
+        protocolRepository.deleteProtocol(id);
+    }
 }
