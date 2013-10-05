@@ -1,7 +1,7 @@
 'use strict';
 
-indexApp.controller('IndexController',
-    function IndexController($scope, indexData, $location){
+indexApp.controller('ProtocolListController',
+    function ProtocolListController($scope, indexData, $location){
         $scope.protocolList = indexData.getProtocolList();
 
         $scope.deleteProtocol = function(protocol){

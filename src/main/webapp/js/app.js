@@ -8,7 +8,7 @@ var indexApp = angular.module('indexApp', ['ngResource', 'ngRoute']).
         });
         $routeProvider.when('/protocols', {
             templateUrl: '/templates/protocolList.jsp',
-            controller: 'IndexController'
+            controller: 'ProtocolListController'
         });
         $routeProvider.when('/new', {
            templateUrl: '/templates/protocol.jsp',
