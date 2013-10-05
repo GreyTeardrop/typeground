@@ -15,5 +15,8 @@ var indexApp = angular.module('indexApp', ['ngResource', 'ngRoute']).
            controller: 'NewProtocolController'
 
         });
+        $routeProvider.when('/', {
+            redirectTo: '/protocols'
+        })
         $locationProvider.html5Mode(true);
     });
