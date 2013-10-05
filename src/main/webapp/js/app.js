@@ -1,7 +1,7 @@
 'use strict';
 
 var indexApp = angular.module('indexApp', ['ngResource', 'ngRoute']).
-    config(function ($routeProvider) {
+    config(function ($routeProvider, $locationProvider) {
         $routeProvider.when('/protocol/:protocolId', {
             templateUrl: '/templates/protocol.jsp',
             controller: 'ProtocolController'
@@ -15,4 +15,5 @@ var indexApp = angular.module('indexApp', ['ngResource', 'ngRoute']).
            controller: 'NewProtocolController'
 
         });
+        $locationProvider.html5Mode(true);
     });
