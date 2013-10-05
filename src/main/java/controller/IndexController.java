@@ -13,7 +13,7 @@ public class IndexController {
     ////////////////////////////////////////////////
     // METHODS
 
-    @RequestMapping(Urls.ROOT)
+    @RequestMapping({Urls.ROOT, Urls.NEW_PROTOCOL, Urls.PROTOCOL_TEMPLATE})
     public String index() {
         return "index";
     }

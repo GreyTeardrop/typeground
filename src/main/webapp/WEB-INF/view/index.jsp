@@ -37,7 +37,7 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="/protocols">Protocols</a></li>
+                <li><a href="/">Protocols</a></li>
                 <li><a href="/new">New</a></li>
                 <%--<li><a href="#about">About</a></li>--%>
                 <%--<li><a href="#contact">Contact</a></li>--%>

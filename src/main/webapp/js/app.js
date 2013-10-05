@@ -6,7 +6,7 @@ var indexApp = angular.module('indexApp', ['ngResource', 'ngRoute']).
             templateUrl: '/templates/protocol.jsp',
             controller: 'ProtocolController'
         });
-        $routeProvider.when('/protocols', {
+        $routeProvider.when('/', {
             templateUrl: '/templates/protocolList.jsp',
             controller: 'ProtocolListController'
         });
@@ -15,8 +15,5 @@ var indexApp = angular.module('indexApp', ['ngResource', 'ngRoute']).
            controller: 'NewProtocolController'
 
         });
-        $routeProvider.when('/', {
-            redirectTo: '/protocols'
-        })
         $locationProvider.html5Mode(true);
     });

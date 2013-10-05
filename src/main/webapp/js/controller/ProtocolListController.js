@@ -6,7 +6,7 @@ indexApp.controller('ProtocolListController',
 
         $scope.deleteProtocol = function(protocol){
             indexData.deleteProtocol(protocol);
-            $location.path('/protocols/');
+            $location.path('/');
         }
     }
 );
