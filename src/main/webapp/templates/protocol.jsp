@@ -3,11 +3,12 @@
     <div class="row">
         <div class="col-sm-8">
             <div class="panel panel-default">
-            <input type="text" class="form-control" name="metaProtocolInfo.name"
-            ng-model="protocol.metaProtocolInfo.name" ng-change="saveProtocol(protocol)"/>
-            <textarea name="text" class="form-control" rows="10"
-                      ng-model="protocol.text" ng-change="saveProtocol(protocol)"></textarea>
+                <input type="text" class="form-control" name="metaProtocolInfo.name"
+                       ng-model="protocol.metaProtocolInfo.name" ng-change="saveProtocol(protocol)"/>
+                <textarea name="text" class="form-control" ng-model="protocol.text" redactor rows="30"
+                          ng-change="saveProtocol(protocol)"></textarea>
             </div>
+            {{protocol.text}}
         </div>
         <div class="col-sm-4">
             <div class="panel panel-success">

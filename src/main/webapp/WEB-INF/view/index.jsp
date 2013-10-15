@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/redactor.css">
     <style>
         body {
             padding-top: 50px;
@@ -67,6 +68,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-resource.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-route.js"></script>
+<script src="/js/vendor/redactor.min.js"></script>
+<script src="/js/vendor/angular-redactor.js"></script>
 
 <script src="/js/app.js"></script>
 <script src="/js/services/IndexData.js"></script>
