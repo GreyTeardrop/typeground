@@ -1,6 +1,6 @@
 'use strict';
 
-var indexApp = angular.module('indexApp', ['ngResource', 'ngRoute', 'angular-redactor']).
+var indexApp = angular.module('indexApp', ['ngResource', 'ngRoute', 'ui.tinymce']).
     config(function ($routeProvider, $locationProvider) {
         $routeProvider.when('/protocol/:protocolId', {
             templateUrl: '/templates/protocol.jsp',
@@ -16,25 +16,4 @@ var indexApp = angular.module('indexApp', ['ngResource', 'ngRoute', 'angular-red
 
         });
         $locationProvider.html5Mode(true);
-    })
-    .directive("redactor", function () {
-        return {
-            require: '?ngModel',
-            link: function ($scope, elem, attrs, controller) {
-
-                controller.$render = function () {
-
-                    elem.redactor({
-                        keyupCallback: function () {
-                            $scope.$apply(controller.$setViewValue(elem.getCode()));
-                        },
-                        execCommandCallback: function () {
-                            $scope.$apply(controller.$setViewValue(elem.getCode()));
-                        }
-                    });
-
-                    elem.setCode(controller.$viewValue);
-                };
-            }
-        };
     });

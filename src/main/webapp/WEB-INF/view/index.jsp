@@ -12,7 +12,6 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/redactor.css">
     <style>
         body {
             padding-top: 50px;
@@ -40,8 +39,6 @@
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="/">Protocols</a></li>
                 <li><a href="/new">New</a></li>
-                <%--<li><a href="#about">About</a></li>--%>
-                <%--<li><a href="#contact">Contact</a></li>--%>
             </ul>
             <form class="navbar-form navbar-right">
                 <div class="form-group">
@@ -65,11 +62,11 @@
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
 <script src="/js/vendor/bootstrap.min.js"></script>
+<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-resource.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-route.js"></script>
-<script src="/js/vendor/redactor.min.js"></script>
-<script src="/js/vendor/angular-redactor.js"></script>
+<script src="/js/vendor/angular-ui-tinymce/tinymce.js"></script>
 
 <script src="/js/app.js"></script>
 <script src="/js/services/IndexData.js"></script>

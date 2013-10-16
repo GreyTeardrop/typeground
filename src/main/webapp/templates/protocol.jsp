@@ -5,7 +5,7 @@
             <div class="panel panel-default">
                 <input type="text" class="form-control" name="metaProtocolInfo.name"
                        ng-model="protocol.metaProtocolInfo.name" ng-change="saveProtocol(protocol)"/>
-                <textarea name="text" class="form-control" ng-model="protocol.text" redactor rows="30"
+                <textarea name="text" class="form-control" ng-model="protocol.text" ui-tinymce rows="30"
                           ng-change="saveProtocol(protocol)"></textarea>
             </div>
             {{protocol.text}}
