@@ -17,4 +17,6 @@ indexApp.controller('ProtocolController',
                     });
             }, 1000)
         };
+
+        $scope.aspects = appConfiguration.aspects;
     });

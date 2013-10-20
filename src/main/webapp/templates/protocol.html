@@ -13,14 +13,7 @@
             <div class="panel panel-success">
                 <div class="panel-heading">Aspects</div>
                 <ul class="list-group">
-                    <li class="list-group-item">БЛ</li>
-                    <li class="list-group-item">ЧЛ</li>
-                    <li class="list-group-item">ЧС</li>
-                    <li class="list-group-item">БС</li>
-                    <li class="list-group-item">БЭ</li>
-                    <li class="list-group-item">ЧЭ</li>
-                    <li class="list-group-item">ЧИ</li>
-                    <li class="list-group-item">БИ</li>
+                    <li class="list-group-item" ng-repeat="aspect in aspects">{{aspect.name}}</li>
                 </ul>
             </div>
         </div>
