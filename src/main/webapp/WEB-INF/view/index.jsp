@@ -1,4 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%--@elvariable id="aspectNames" type="java.util.List<domain.type.Aspect>"--%>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -78,14 +81,9 @@
 <script>
     var appConfiguration = {
         'aspects': [
-            {'name': 'ЧЛ'},
-            {'name': 'БЛ'},
-            {'name': 'ЧС'},
-            {'name': 'БС'},
-            {'name': 'ЧЭ'},
-            {'name': 'БЭ'},
-            {'name': 'ЧИ'},
-            {'name': 'БИ'}
+<c:forEach items="${aspectNames}" var="aspect" varStatus="status">
+            {'name': '<spring:message code="aspect.name.${aspect}"/>'}<c:if test="${not status.last}">,</c:if>
+</c:forEach>
         ]
     };
 </script>
