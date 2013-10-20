@@ -3,15 +3,15 @@
 var indexApp = angular.module('indexApp', ['ngResource', 'ngRoute', 'ui.tinymce']).
     config(function ($routeProvider, $locationProvider) {
         $routeProvider.when('/protocol/:protocolId', {
-            templateUrl: '/templates/protocol.jsp',
+            templateUrl: '/templates/protocol.html',
             controller: 'ProtocolController'
         });
         $routeProvider.when('/', {
-            templateUrl: '/templates/protocolList.jsp',
+            templateUrl: '/templates/protocolList.html',
             controller: 'ProtocolListController'
         });
         $routeProvider.when('/new', {
-            templateUrl: '/templates/protocol.jsp',
+            templateUrl: '/templates/protocol.html',
             controller: 'NewProtocolController'
 
         });
